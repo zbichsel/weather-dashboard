@@ -40,7 +40,6 @@ function getLoc(event) {
             var lon = data[0].lon;
             document.getElementById('cityName').innerHTML = inputField + ' ' + datum;
             console.log(lat, lon);
-            document.getElementById('searchBtn').addEventListener('click', searchBtn);
             getWetter(lat, lon);
         })
 };
@@ -64,3 +63,5 @@ function getWetter(lat, lon) {
             var headerDayOne = document.createElement
         })
 };
+
+searchBtn.addEventListener('click', getLoc);
